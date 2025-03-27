@@ -1,0 +1,31 @@
+Дел 2: Софтверски развој со користење на Git систем за контрола на верзии
+13. git fetch origin #ми ги излиста  новите гранки кои ги направив за да ги решам 3те issues.
+14. git checkout 1-remove-a-task-by-name #се префрлив на првата гранка 
+15. nano SI2025Lab1Main.java #и овде ја имплементирам првата функција
+16. git add SI20205Lab1Main.java
+        git commit -m “added feature for removing a task by name” 
+17. git push -u origin 1-remove-a-task-by-name # синхронизирам со соодветната remote гранка
+18. на GitHub веднаш излегува дека сме имале неодамна push направено. Ни овозможува да извршиме Compare and pull request каде што ние креиравме pull request.
+19. Командите се повторуваат за вториот и третиот feature со соодветните имиња и код.
+20. На GitHub кликнав на копчето Pull requests каде што имаше број 3 до него бидејќи имав 3 Pull requests направено. За 1 и 2  го искористив копчето Merge. Не се случија никакви конфилкти. Ми даде „No conflicts with base branch, Merging can be performed automatically“.
+21. Да, тие два issues кои беа во InProgress сега се во Done. Исто така може да забележиме дека бројчето до Issues сега е намалено на 7, првично беше 9.
+22.git checkout master # се префрлам на мастер гранката
+       Git pull origin master
+       git merge 7-count-tasks-per-category # ги спојувам мастер и 7-гранката локално
+Го направив тоа и се изврши auto-merging. „Auto-merging SI2025Lab1Main.java. Merge made by the 'ort' strategy“. 
+23. извршив git push origin master. 
+24. на мастер гранката на GitHub го имаше кодот за task 7 и issues сега беа 6, односно и седмиот се префли во Done.
+25. тоа што го добив од git log –oneline –graph –all (со по 2 цртички) го ставив во log.txt, со командата cat>log.txt. На истиов начин ќе го додадам и ова во 236009.txt.
+26. git push origin master
+
+Дел 3: Forking git workflow
+27. На GitHub профилот на Стефан го пронајдов репозиториумот и го fork-нав со 2 клика.
+28. git clone https://github.com/oxSTERBENxo/SI_2025_lab1_151020.git 
+29. cd SI_2025_Lab1_151020
+        cat > 236009.txt  #во него испишав име презиме
+        git add .
+        git commit -m “Add file”
+30. git push origin master
+31. Во самиот форкед репо ми дава дека сум 1 commit ahead. Кликнав contribute па Create a pull request
+32. Како наслов го ставив само мојот индекс 236009
+
